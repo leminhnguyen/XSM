@@ -4,6 +4,7 @@ from matplotlib import pyplot as plt
 from XSM import XSM
 from timefc import Time
 
+
 class ReferenceClassTime(XSM):
 
     PROJECTS = ["C2014-05", "C2014-06", "C2014-07", "C2014-08"]
@@ -110,6 +111,7 @@ class ReferenceClassTime(XSM):
             # if row==1 and col <= 1: axes[row][col].set_xlabel("Tracking Periods")
             axes.plot(TPs, np.append(error,0), label=f"{datafile} - mape={round(mape, 2)}")
             result.append((TPs, np.append(error,0), f"{datafile} - mape={round(mape, 2)}"))
+            axes.set_title("K61-Reference Class")
             axes.legend()
             if (idx+1)%2 == 0: 
                 row += 1; col=0
