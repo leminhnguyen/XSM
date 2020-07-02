@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+    
+    },
+    "python.autoComplete.extraPaths": ["source"]
+}
